@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Secrets – NEVER commit these. Configure them in Hostinger hPanel instead.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.crt
+# …except the public Supabase root CA used to verify the database certificate
+!certs/supabase-root-2021-ca.crt
+
+# Local database, backups and data exports (contain password hashes and customer leads)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+exports/
+export-*.json
+backup-*.json
+
+# Uploaded images (production images live in Supabase Storage)
+uploads/
+
+# Logs, OS and editor files
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal Claude Code settings
+.claude/settings.local.json
